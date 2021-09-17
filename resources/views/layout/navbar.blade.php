@@ -362,12 +362,14 @@
     <div class="row">
         <div class="col-8">
             <a class="navbar-brand" href="{{url('/')}}">
-                <picture>
+         {{--       <picture>
                     <source srcset="{{asset('img/logos/logoJardepot.webp')}}" type="image/webp">
                     <source srcset="{{asset('img/logos/logoJardepot.png')}}" type="image/png">
                     <img class="logo-navbar" style="width: 60%" src="{{asset('img/logos/logoJardepot.png')}}"
                          alt="Logo Jardepot" title="Logo Jardepot">
-                </picture>
+                </picture>--}}
+                <img class="logo-navbar" style="width: 60%" src="{{asset('img/logos/logoJardepot.png')}}"
+                     alt="Logo Jardepot" title="Logo Jardepot">
                 {{--<img class="logo-navbar" style="width: 40px" src="{{asset('assets/images/otros/calaberita.png')}}"
                      alt="Imagen Temporada title="Imagen Temporada">--}}
             </a>
