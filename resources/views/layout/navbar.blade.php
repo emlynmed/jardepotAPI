@@ -158,12 +158,14 @@
                     </div>
                     <div class="col-md-2 my-3 mr-n3 ml-n3 ml-xxs-1">
                         <a class="navbar-brand" href="{{url('/')}}" style="height: 50px">
-                            <picture >
+                    {{--        <picture >
                                 <source srcset="{{asset('img/logos/logoJardepot.webp')}}" type="image/webp">
                                 <source srcset="{{asset('img/logos/logoJardepot.png')}}" type="image/png">
                                 <img class="logo-navbar" style="height:100%;" src="{{asset('img/logos/logoJardepot.png')}}"
                                     alt="¡Tu equipo siempre contigo!" title="¡Tu equipo siempre contigo!">
-                            </picture>
+                            </picture>--}}
+                            <img class="logo-navbar" style="height:100%;" src="{{asset('img/logos/logoJardepot.png')}}"
+                                 alt="¡Tu equipo siempre contigo!" title="¡Tu equipo siempre contigo!">
 
                             {{--   <img class="logo-navbar" style="width: 58px;margin-left: 20px" src="{{asset('assets/images/otros/calaberita.png')}}"
                                     alt="Imagen Temporada" title="Imagen Temporada">--}}
