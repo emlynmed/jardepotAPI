@@ -116,10 +116,10 @@ class CartRepository{
                 'productos.volada',
                 'productos.visible',
                 'productos.proveedor',
-                'XML.keywords',
+/*                'XML.keywords',
                 'XML.metadesc',
                 'XML.descriptionweb',
-                'XML.resenia',
+                'XML.resenia',*/
                 DB::raw('SUM(inventario.cantidad) as cantidadInventario')
             )
             ->where([

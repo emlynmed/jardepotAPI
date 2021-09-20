@@ -1,4 +1,65 @@
 <footer class="container-fluid" style="background: #424242; color: #fff;">
+    {{--  INFORMACION DE CONTACTO  --}}
+    <div class="row justify-content-md-center">
+        <div class="col-xl-9 col-lg-11 my-4" style="max-width: 1300px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="font-weight-bold my-2" style="font-size:40px;font-weight: 500">Sucursal y Centros de Servicio</h4>
+                    <div class="row">
+                        <div class="col-md-3" style="line-height: 1.5;">
+                            <a class="link-footer" href="https://goo.gl/maps/X217x5HGYWMCLJqSA" target="_blank" rel="noopener">
+                                <p class="d-flex align-items-center my-2">
+                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Morelos</span>
+                                </p>
+                                <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
+                                    Av. Emiliano Zapata No. 129 Local 4<br> Colonia Tlaltenango, <br> Cuernavaca, Morelos 62170
+                                </p>
+                            </a>
+                            <img src="{{asset('assets/images/otros/maps.jpg')}}" alt="Google Maps" title="google maps" style="width: 95%; height: 150px;">
+                            <div class="mt-3" style="font-size: 16px; line-height: 1.5;">
+                                <p class="d-flex align-items-center my-2"><i class="material-icons fn-color-jd mr-2">access_time</i> Lunes - Viernes / 9:00AM - 6:00PM</p>
+                                <p class="d-flex align-items-center my-2"><i class="material-icons fn-color-jd mr-2">access_time</i> Sabado / 9:00AM - 2:00PM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="line-height: 1.5;">
+                            <a class="link-footer" href="https://goo.gl/maps/6eq7dv4uKsVuMfA36" target="_blank" rel="noopener">
+                                <p class="d-flex align-items-center my-2">
+                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Monterrey</span>
+                                </p>
+                                <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
+                                    San Bernabé 322,<br> Colonia Morelos,<br> Monterrey, N.L. 64180
+                                </p>
+                            </a>
+                            <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps" title="google maps mty" style="width: 95%; height: 150px;">
+                        </div>
+                    </div>
+
+                    <br>
+                    <h4 class="font-weight-bold my-2 mt-4" style="font-size: 18px;">Atención a Comercializadoras y Mayoristas:</h4>
+                    <div class="mt-3"  style="font-size: 16px; line-height: 1.5;">
+                        <p class="d-flex align-items-center my-2">
+                            <i class="material-icons fn-color-jd mr-2">call</i>
+                            <a href="tel:5544598506" class="font-weight-bold link-footer">55 4459 8506.</a>
+                        </p>
+                        <p class="d-flex align-items-center my-2">
+                            <i class="material-icons fn-color-jd mr-2">email</i>
+                            <a href="mailto:mayoreo@jardepot.com" class="link-footer">mayoreo@jardepot.com</a>
+                        </p>
+                        <p class="d-flex align-items-center my-2">
+                            <i class="material-icons fn-color-jd mr-2">email</i>
+                            <a href="mailto:ventas@jardepot.com" class="link-footer">ventas@jardepot.com</a>
+                        </p>
+                        <p class="d-flex align-items-center my-2">
+                            <i class="material-icons fn-color-jd mr-2">email</i>
+                            <a href="mailto:refacciones@jardepot.com" class="link-footer">refacciones@jardepot.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-bottom: 1px solid rgba(250,250,250,.2);">
+        </div>
+    </div>
+
     {{--  TELÉFONOS  --}}
     <div class="row justify-content-md-center d-none d-md-flex">
         <div class="col-xl-9 col-lg-11 my-4" style="display: flex; flex-wrap: wrap; max-width: 1300px;margin-top:0;margin-bottom: 0">
@@ -30,6 +91,7 @@
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p>Querétaro</p>
+                    <a href="tel:4423801818" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">442 380 1818</span></a><br>
                     <a href="tel:4423960365" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">442 396 0365</span></a><br>
                     <a href="tel:4421239272" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">442 123 9272</span></a><br>
                 </div>
@@ -51,6 +113,8 @@
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Nuevo León</p>
                     <a href="tel:8120635708" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">81 2063 5708</span></a><br>
+                    <a href="tel:8131826279" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">81 3182 6279</span></a><br>
+                    <a href="tel:8131826482" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">81 3182 6482</span></a><br>
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Estado de México</p>
@@ -87,59 +151,6 @@
             </div>
             {{--<div class="w-20-tel">
             </div>--}}
-        </div>
-    </div>
-
-    {{--  INFORMACION DE CONTACTO  --}}
-    <div class="row justify-content-md-center">
-        <div class="col-xl-9 col-lg-11 my-4" style="max-width: 1300px;">
-            <div class="row">
-                <div class="col-md-7">
-                    <h4 class="font-weight-bold my-2" style="font-size: 18px;">Centros de Servicio y Distribución</h4>
-                    <div class="row">
-                        <div class="col-md-6" style="line-height: 1.5;">
-                            <a class="link-footer" href="https://goo.gl/maps/X217x5HGYWMCLJqSA" target="_blank" rel="noopener">
-                                <p class="d-flex align-items-center my-2">
-                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>Morelos</span>
-                                </p>
-                                <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
-                                    Av. Emiliano Zapata No. 129 Local 4<br> Colonia Tlaltenango, Cuernavaca Morelos.
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mt-3" style="font-size: 16px; line-height: 1.5;">
-                        <p class="d-flex align-items-center my-2"><i class="material-icons fn-color-jd mr-2">access_time</i> Lunes - Viernes / 9:00AM - 6:00PM</p>
-                        <p class="d-flex align-items-center my-2"><i class="material-icons fn-color-jd mr-2">access_time</i> Sabado / 9:00AM - 2:00PM</p>
-                    </div>
-                    <br>
-                    <h4 class="font-weight-bold my-2 mt-4" style="font-size: 18px;">Atención a Comercializadoras y Mayoristas:</h4>
-                    <div class="mt-3"  style="font-size: 16px; line-height: 1.5;">
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">call</i>
-                            <a href="tel:5544598506" class="font-weight-bold link-footer">55 4459 8506.</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:mayoreo@jardepot.com" class="link-footer">mayoreo@jardepot.com</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:ventas@jardepot.com" class="link-footer">ventas@jardepot.com</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:refacciones@jardepot.com" class="link-footer">refacciones@jardepot.com</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <source srcset="{{asset('assets/images/otros/maps.webp')}}" type="image/webp">
-                    <source srcset="{{asset('assets/images/otros/maps.png')}}" type="image/png">
-                    <img src="{{asset('assets/images/otros/maps.png')}}" alt="Google Maps" title="google maps" style="width: 100%; height: 250px;">
-                </div>
-            </div>
-            <hr style="border-bottom: 1px solid rgba(250,250,250,.2);">
         </div>
     </div>
 
