@@ -30,7 +30,7 @@
                                     San Bernabé 322,<br> Colonia Morelos,<br> Monterrey, N.L. 64180
                                 </p>
                             </a>
-                            <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps" title="google maps mty" style="width: 95%; height: 150px;">
+                            <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
                         </div>
                     </div>
 
