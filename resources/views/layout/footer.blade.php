@@ -4,7 +4,7 @@
         <div class="col-xl-9 col-lg-11 my-4" style="max-width: 1300px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="font-weight-bold my-2" style="font-size:40px;font-weight: 500">Sucursal y Centros de Servicio</h4>
+                    <h4 class="font-weight-bold my-2" style="font-size:40px;font-weight: 500">Sucursales y Centros de Servicio</h4>
                     <div class="row">
                         <div class="col-md-3" style="line-height: 1.5;">
                             <a class="link-footer" href="https://goo.gl/maps/X217x5HGYWMCLJqSA" target="_blank" rel="noopener">
@@ -32,27 +32,6 @@
                             </a>
                             <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
                         </div>
-                    </div>
-
-                    <br>
-                    <h4 class="font-weight-bold my-2 mt-4" style="font-size: 18px;">Atención a Comercializadoras y Mayoristas:</h4>
-                    <div class="mt-3"  style="font-size: 16px; line-height: 1.5;">
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">call</i>
-                            <a href="tel:5544598506" class="font-weight-bold link-footer">55 4459 8506.</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:mayoreo@jardepot.com" class="link-footer">mayoreo@jardepot.com</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:ventas@jardepot.com" class="link-footer">ventas@jardepot.com</a>
-                        </p>
-                        <p class="d-flex align-items-center my-2">
-                            <i class="material-icons fn-color-jd mr-2">email</i>
-                            <a href="mailto:refacciones@jardepot.com" class="link-footer">refacciones@jardepot.com</a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -151,7 +130,31 @@
             </div>
             {{--<div class="w-20-tel">
             </div>--}}
+            <div class="col-md-12">
+                <br>
+                <h4 class="font-weight-bold my-2 mt-4" style="font-size: 18px;">Atención a Comercializadoras y Mayoristas:</h4>
+
+                <div class="mt-3"  style="font-size: 16px; line-height: 1.5;">
+                    <p class="d-flex align-items-center my-2">
+                        <i class="material-icons fn-color-jd mr-2">call</i>
+                        <a href="tel:5544598506" class="font-weight-bold link-footer">55 4459 8506.</a>
+                    </p>
+                    <p class="d-flex align-items-center my-2">
+                        <i class="material-icons fn-color-jd mr-2">email</i>
+                        <a href="mailto:mayoreo@jardepot.com" class="link-footer">mayoreo@jardepot.com</a>
+                    </p>
+                    <p class="d-flex align-items-center my-2">
+                        <i class="material-icons fn-color-jd mr-2">email</i>
+                        <a href="mailto:ventas@jardepot.com" class="link-footer">ventas@jardepot.com</a>
+                    </p>
+                    <p class="d-flex align-items-center my-2">
+                        <i class="material-icons fn-color-jd mr-2">email</i>
+                        <a href="mailto:refacciones@jardepot.com" class="link-footer">refacciones@jardepot.com</a>
+                    </p>
+                </div>
+            </div>
         </div>
+
     </div>
 
     {{--  INFORMACION DE LEGAL  --}}
