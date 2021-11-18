@@ -34,13 +34,13 @@
                         <h2 class="py-2 col-12 col-lg-8 text-center">Gracias por tu compra por {{$payment}}.</h2>
                         <h3 class="py-1 col-12 col-lg-8 text-center">Tu pedido se procesará en breve y te informaremos el número de guía de paquetería que le corresponde.</h3>
                         <h3 class="py-1 col-12 col-lg-8 text-center">¿Necesitas factura electronica? Responde con tus datos de facturación al mensaje de correo que te enviamos a la dirección de correo electrónico que nos proporcionaste</h3>
-                        <h2 class="py-2 col-12 col-lg-8 text-center">Si tienes alguna duda por favor contáctanos 800 212 9225.</h2>
+                        <h2 class="py-2 col-12 col-lg-8 text-center">Si tienes alguna duda por favor contáctanos 222 705 17 26.</h2>
                     @else
                         <i class="material-icons fn-color-jd" style="font-size: 100px;">cancel</i>
                         <h2 class="py-2 col-12 col-lg-8 text-center">Algo ha salido mal, {{$payment}} no ha procesado correctamente tu compra.</h2>
                         <h3 class="py-1 col-12 col-lg-8 text-center">Sabemos que en ocasiones esto puede ser frustrante. Comunicate con nosotros, te apoyaremos en lo que necesites.</h3>
                         <h3 class="py-1 col-12 col-lg-8 text-center">Por favor intentalo de nuevo.</h3>
-                        <h2 class="py-2 col-12 col-lg-8 text-center">Estamos aquí para ayudarte contáctanos 800 212 9225</h2>
+                        <h2 class="py-2 col-12 col-lg-8 text-center">Estamos aquí para ayudarte contáctanos 222 705 17 26</h2>
                     @endif
                     <a class="btn btn-warning" href="{{url('/')}}">Volver al inicio</a>
                 </div>

@@ -493,8 +493,8 @@
 {{--                            mustra formulario mobil--}}
                             <div class="card shadow-lg pl-1 mt-2 d-block d-sm-block d-lg-none">
                                 <div style="margin: 5px">
-                                    <a class="h4" href="tel:8002129225" style="color: #1b1e21">
-                                        <i class="material-icons iconMod">local_phone</i>800 212 9225
+                                    <a class="h4" href="tel:2227051726" style="color: #1b1e21">
+                                        <i class="material-icons iconMod">local_phone</i>222 705 17 26
                                     </a>
                                     <p class="h6">Llame ó llene con su información para que un asesor le contacte.</p>
                                     <div class="divider mb-2"></div>
@@ -649,8 +649,8 @@
 {{--                            muestra formulario escritorio--}}
                             <div class="card shadow-lg pl-1 mt-2  d-none d-sm-none d-md-block">
                                 <div style="margin: 5px">
-                                    <a class="h4" href="tel:8002129225" style="color: #1b1e21">
-                                        <i class="material-icons iconMod">local_phone</i>800 212 9225
+                                    <a class="h4" href="tel:222 705 17 26" style="color: #1b1e21">
+                                        <i class="material-icons iconMod">local_phone</i>222 705 17 26
                                     </a>
                                     <p class="h6">Llame ó llene con su información para que un asesor le contacte.</p>
                                     <div class="divider mb-2"></div>
@@ -693,7 +693,7 @@
                         @if($ipl > 0)
                         <div class="col-lg-12 col-md-12 card shadow" >
                             <h4 class="title-product">{{ucwords($product['productType'])}} {{ucwords($product['brand'])}} - <span style="text-transform: uppercase;">{{$product['mpn']}}</h4>
-                            <h4 style="color: #000; text-align: center;">Comunícate al <br> <i class="fa fa-phone"></i> <strong> 800 212 9225</strong> ó <strong>722 648 1040</strong></h4>
+                            <h4 style="color: #000; text-align: center;">Comunícate al <br> <i class="fa fa-phone"></i> <strong> 222 705 17 26</strong> ó <strong>722 648 1040</strong></h4>
                             <div class="row">
                                 <div class="col-md-12 mt-2">
                                     <div class="mt-element-list">

@@ -50,7 +50,7 @@
             <div class="col-md-3">
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Del Interior</p>
-                    <a href="tel:8002129225" style="color: #fff;"><span class="my-4" style="font-size: 25px; font-weight: 500;">800 212 9225</span></a>
+                    <a href="tel:2227051726" style="color: #fff;"><span class="my-4" style="font-size: 25px; font-weight: 500;">222 705 17 26</span></a>
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px; font-size: 20px">Mayoreo</p>
@@ -198,7 +198,7 @@
         </a>
     </div>
     <div class="btn-side-footer btn-side-phone">
-        <a target="_blank" href="tel:8002129225">
+        <a target="_blank" href="tel:2227051726">
             <i class="material-icons">phone</i>
         </a>
     </div>
