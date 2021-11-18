@@ -105,8 +105,8 @@
                         <div class="col-md-2 mt-2" style="padding: 0; line-height:25px;">
                             <div class="text-barra-2 text-center" style="font-size: 22px;">
                                 Llámanos al<br/>
-                                <a href="tel:8002129225" style="font-size: 22px !important;">
-                                    800 212 9225
+                                <a href="tel:2227051726" style="font-size: 22px !important;">
+                                    222 705 17 26
                                 </a>
                             </div>
                         </div>
@@ -448,7 +448,7 @@
                 </svg>Whatsapp</a>
         </div>
         <div class="col-12 mt-2">
-            <a class="mr-2 btn-warning btn-sm d-flex" href="tel:8002129225"
+            <a class="mr-2 btn-warning btn-sm d-flex" href="tel:2227051726"
                style="text-decoration: none;"><i class="material-icons iconMod">call</i>Llámanos</a>
         </div>
     </div>
@@ -487,7 +487,7 @@
                         <div style="padding: 0;" class="col-12 col-md-3">
                             <div style="margin-bottom: 20px;">
                                 <p style="margin-bottom: 0px;font-size: 20px">Del Interior</p>
-                                <a href="tel:8002129225" class="telModal" ><span class="my-4" style="font-size: 20px; font-weight: 500;"><i class="material-icons">call</i>800 212 9225</span></a>
+                                <a href="tel:2227051726" class="telModal" ><span class="my-4" style="font-size: 20px; font-weight: 500;"><i class="material-icons">call</i>222 705 17 26</span></a>
                             </div>
                             <div style="margin-bottom: 20px;">
                                 <p style="margin-bottom: 0px; font-size: 20px">Mayoreo</p>
