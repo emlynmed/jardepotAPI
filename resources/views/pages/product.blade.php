@@ -649,8 +649,8 @@
 {{--                            muestra formulario escritorio--}}
                             <div class="card shadow-lg pl-1 mt-2  d-none d-sm-none d-md-block">
                                 <div style="margin: 5px">
-                                    <a class="h4" href="tel:222 705 17 26" style="color: #1b1e21">
-                                        <i class="material-icons iconMod">local_phone</i>222 705 17 26
+                                    <a class="h4" href="tel:8002129225" style="color: #1b1e21">
+                                        <i class="material-icons iconMod">local_phone</i>800 212 9225
                                     </a>
                                     <p class="h6">Llame ó llene con su información para que un asesor le contacte.</p>
                                     <div class="divider mb-2"></div>
@@ -936,19 +936,22 @@
         });
     </script>
     <script type="application/ld+json">
-        {
+    {
             "@context": "http://schema.org",
             "@type": "Product",
-            "name": "{{$product['name']}}",
-            "mpn": "{{$product['mpn']}}",
-            "brand": "{{$product['brand']}}",
-            "image": "{{asset($product['images'][0]['medium'])}}",
-            "description": "{{$product['description']}}",
+            "name": "<?php echo e($product['name']); ?>",
+            "mpn": "<?php echo e($product['mpn']); ?>",
+            "brand": {
+                "@type": "Brand",
+                "name": "<?php echo e($product['brand']); ?>"
+            },
+            "image": "<?php echo e(asset($product['images'][0]['medium'])); ?>",
+            "description": "<?php echo e($product['description']); ?>",
             "offers": {
                 "@type": "Offer",
-                "price": {{isset($product['newPriceFloat'])?str_replace(",","",$product['newPriceFloat']):null}},
+                "price": <?php echo e(isset($product['newPriceFloat'])?str_replace(",","",$product['newPriceFloat']):null); ?>,
                 "priceCurrency": "MXN"
-            },
+            }
         }
     </script>
 @endsection

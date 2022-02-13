@@ -9,9 +9,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /config/database.php
-/public/assets/images/productos/*
-/public/assets/images/ofertas/*
-/public/assets/images/banner/*
+/public/assets/images/*
 /public/owa/*
 /public/assets/js/path.js
 /public/rfcs/*
