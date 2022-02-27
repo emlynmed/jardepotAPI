@@ -384,19 +384,20 @@
                 <br>
                 <br>
                 10. Garantía de los productos adquiridos.
-                Jardepot actúa en calidad de distribuidor de fabricantes o distribuidores mayoristas que garantizan que los productos que se presentan a
-                la venta en el Sitio Web funcionan correctamente y no presentan defectos, ni vicios ocultos que puedan hacerlos peligrosos o inadecuados
-                para su uso normal. La garantía contractual ofrecida es la que habitualmente concede el proveedor y la misma será claramente detallada
-                en la ficha descriptiva de los productos. Una vez que el Usuario haya recibido el producto tendrá un folleto informativo que provee el
-                fabricante con las instrucciones suficientes para el correcto uso e instalación del producto y toda la información acerca de la garantía.
-                Ningún Usuario podrá reclamar una garantía más amplia de la que ahí se indica. Jardepot no estará obligado a recoger el producto averiado
-                y el Usuario deberá dirigirse al Servicio Posventa del Proveedor. En este sentido, Jardepot realizará las acciones encaminadas a proporcionar
-                a los Usuarios que así lo soliciten los datos de contacto de dicho servicio y facilitará a estos información suficiente para la presentación
-                de las reclamaciones pertinentes. La garantía perderá su vigencia en caso de defectos o deterioros causados por factores externos, accidentes,
-                en especial, accidentes eléctricos, desgaste, instalación y utilización no conforme a las instrucciones del Proveedor. Quedan excluidos de
-                la garantía los productos modificados o reparados por el Usuario o cualquier otra persona no autorizada por el proveedor. La garantía no será
-                aplicable a los vicios aparentes y los defectos de conformidad del producto, para los que cualquier reclamación deberá ser formulada por
-                el Usuario en cuestión en los 7 días siguientes a la entrega de los productos. La garantía no cubrirá los productos dañados por un uso inadecuado.
+                Jardepot actúa en calidad de comercio electrónico para fabricantes o importadores que garantizan que los productos que se presentan a la 
+                venta en el Sitio Web funcionan correctamente y no presentan defectos, ni vicios ocultos que puedan hacerlos peligrosos o inadecuados para 
+                su uso normal. La garantía contractual ofrecida es la que habitualmente concede el proveedor y la misma será claramente detallada en la ficha 
+                descriptiva de los productos. Una vez que el Usuario haya recibido el producto tendrá un folleto informativo que provee el fabricante con las 
+                instrucciones suficientes para el correcto uso e instalación del producto y toda la información acerca de la garantía. Ningún Usuario podrá reclamar 
+                una garantía más amplia de la que ahí se indica. Jardepot no estará obligado a recoger ningún producto averiado y el Usuario deberá dirigirse al 
+                Servicio Posventa del Fabricante o importador. En este sentido, Jardepot realizará las acciones encaminadas a proporcionar a los Usuarios que así 
+                lo soliciten los datos de contacto de dicho servicio y facilitará a estos, información suficiente para la presentación de las reclamaciones 
+                pertinentes. La garantía perderá su vigencia en caso de defectos o deterioros causados por factores externos, accidentes, en especial, 
+                accidentes eléctricos, desgaste, instalación y utilización no conforme a las instrucciones del Proveedor. Quedan excluidos de la garantía los productos
+                modificados o reparados por el Usuario o cualquier otra persona no autorizada por el proveedor. 
+                La garantía no será aplicable a los vicios aparentes y los defectos de conformidad del producto, para los que cualquier reclamación deberá ser 
+                formulada por el Usuario en cuestión en los 7 días siguientes a la entrega de los productos. La garantía no cubrirá los productos dañados por un uso 
+                inadecuado.
                 <br>
                 <br>
                 11. Propiedad intelectual e industrial.

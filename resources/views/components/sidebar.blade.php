@@ -41,7 +41,7 @@
                         @if(strtolower($level1) == "marcas")
                             <div class="text-center col-6 my-1 p-1">
                                 <div class="btn-group-toggle filter" data-toggle="buttons">
-                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-sm btn-filter-2 btn-no-border
+                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-block 
                                             {{$idFilter == $itemFilter['id']?"active-filter bg-color-jd active":""}}" onclick="function noclick(e) { e.stopPropagation();}"
                                         href="@if(isset($redirectors[$url])){{ $redirectors[$url] }}@else{{ $url }}@endif" >
                                         {{$itemFilter['name']}}
