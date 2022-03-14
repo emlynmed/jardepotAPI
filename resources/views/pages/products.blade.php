@@ -39,6 +39,17 @@
         @slot('level2', $categoryLevel2)
     @endcomponent
 
+<style>
+    div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    padding: col-12;
+    }
+
+
+
+</style>
+
     <div class="wrapper">
         <input id="level1" type="hidden" value="{{$categoryLevel1}}">
         <input id="level2" type="hidden" value="{{$categoryLevel2}}">
@@ -88,7 +99,8 @@
                             {{ isset($descriptionLevel2->textH1) ? $descriptionLevel2->textH1 : $descriptionLevel2->nombreCategoriaNivel2 }}
                         </h1>
                     </div>
-                    <div class="row border shadow rounded bg-dark my-2 text-white px-2 d-flex justify-content-between align-items-center">
+
+                    <div class="row border shadow rounded bg-dark my-2 text-white px-2 d-flex justify-content-between align-items-center scrollmenu">
                         <div class="d-flex justify-content-center align-items-center">
                             <p>Ordenar por:</p>
                             <select id="orderBy" class="form-control">
@@ -102,41 +114,42 @@
                             <i class="material-icons mr-2">menu</i>
                             <span>Filtros y secciones</span>
                         </button>
+                        <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Mostrar <span class="current-number-items">20</span>
+
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
+                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
+                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
+                                </div>
+                            </div>
                         <div class="row pagination-container">
-                            <div class="col-12" style="border-radius: 5px;overflow: hidden;">
+                            <div class="col-12 ;">
                                 <nav aria-label="Search results products">
                                     <ul class="pagination d-flex justify-content-center align-items-center my-2">
-                                        <li class="page-item previous-page disabled">
-                                            <a class="page-link" data-val="--" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                        <li class="page-item previous-page disabled display: inline-block;">
+                                            <a class=" page-link" data-val="--" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                         </li>      
                                         </li>
+                                         </li>      
                                         @for ($i = 0; $i < $numberPages; $i++)
                                             <li class="page-item number-page @if($i == 0) active @endif">
                                                 <a class="page-link" data-val="{{ $i+1 }}" href="#">{{ $i+1 }}</a>
                                             </li>
                                         @endfor
                                         <li class="page-item next-page @if($numberPages <= 1) disabled @endif">
-                                            <a class="page-link" data-val="++" href="#">Siguiente</a>
+                                            <a class=" page-link" data-val="++" href="#">Siguiente</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <div>
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">
-
-                                    Mostrar <span class="current-number-items">16</span>
-
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item number-items" data-val="16" href="#" id="eight-products">16</a>
-                                    <a class="dropdown-item number-items" data-val="20" href="#">20</a>
-                                    <a class="dropdown-item number-items" data-val="24" href="#">24</a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div id="cards-sections" class="row">
@@ -237,8 +250,9 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="row border shadow bg-white rounded mt-2 pagination-container">
-                        <div class="col-12" style="border-radius: 5px;overflow: hidden;">
+                    
+                    <div class="row border shadow bg-white rounded mt-2 pagination-container scrollmenu">
+                        <div class="">
                             <nav aria-label="Search results products">
                                 <ul class="pagination d-flex justify-content-center align-items-center my-2">
                                     <li class="page-item previous-page disabled">
@@ -313,17 +327,18 @@
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                    aria-expanded="false">
-                                    Mostrar <span class="current-number-items">16</span>
+                                    Mostrar <span class="current-number-items">20</span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item number-items" data-val="16" href="#" id="eight-products">16</a>
-                                    <a class="dropdown-item number-items" data-val="20" href="#">20</a>
-                                    <a class="dropdown-item number-items" data-val="24" href="#">24</a>
+                                <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
+                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
+                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div id="cards-sections-search" class="row">
                         @foreach($productsListSearch as $key => $item)
                             <div class="card shadow-sm product-item col-sm-6 col-md-4 col-lg-3 p-0 mt-2 @if($loop->iteration > 16) d-none  @endif"

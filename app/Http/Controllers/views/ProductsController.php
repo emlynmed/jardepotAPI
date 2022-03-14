@@ -605,4 +605,47 @@ class ProductsController extends Controller {
         }
     }
 
+    public function productsListTest($categoryLevel1, $categoryLevel2, $categoryLevel3){
+        $categoryLevel1 = str_replace("-", " ", ucfirst($categoryLevel1));
+        $categoryLevel2 = str_replace("-", " ", ucfirst($categoryLevel2));
+        $categoryLevel3 = str_replace("-", " ", ucfirst($categoryLevel3));
+        $menuController = new MenuController();
+        $categoriasNivel1 = $menuController->getSidebar();
+        foreach ($categoriasNivel1 as $key => $categoria1) {
+            $categoriasNivel1[$key]->nombreCategoriaNivel1 = $categoria1->nombreCategoriaNivel1;
+            $niv1 = str_replace(' ','-', $categoria1->nombreCategoriaNivel1);
+            $href1 = strtr($niv1, $this->unwanted_array);
+            $categoriasNivel1[$key]->href = strtolower($href1);
+            foreach ($categoria1->nivel2 as $key2 => $categoria2){
+                $niv2 = str_replace(' ','-',$categoria2->name);
+                $href = strtr($niv2, $this->unwanted_array);
+                $categoriasNivel1[$key]->nivel2[$key2]->href = strtolower($href);
+            }
+        }
+        $sidebar = $categoriasNivel1;
+        $productController = new \App\Http\Controllers\ProductController();
+        $products = $productController->getProductsListLevel3($categoryLevel1, $categoryLevel2, $categoryLevel3);
+        $idFilter = $productController->getIdLevel3($categoryLevel1, $categoryLevel2, $categoryLevel3);
+        $products = $this->porductModelFormat($products);
+        $numberPages = count($products) / 16;
+        $filters = $productController->getSectionsLevel3($categoryLevel1, $categoryLevel2);
+        $descriptionLevel2 =$this->productoRepository->getDescriptionLevel3($categoryLevel1, $categoryLevel2, $categoryLevel3);
+
+        $textFilter = "";
+        if($categoryLevel1 == "Marcas" || $categoryLevel1 == "Refacciones"){
+            $textFilter = "equipos";
+        }else{
+            $textFilter = "marcas";
+        }
+        $canonical = url()->current();;
+
+        /* 
+                return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'products', 'numberPages', 'filters', 'textFilter', 'descriptionLevel2', 'idFilter','canonical'));
+
+        */
+        return "exito";
+    }
+
+    
+
 }

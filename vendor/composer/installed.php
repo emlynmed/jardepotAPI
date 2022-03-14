@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'be97ff0cb20108f3059ee977a81b764bf644427e',
+        'reference' => '6f70e676ffe086c57b62daca25db3bed8d5ecfb1',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -167,12 +167,12 @@
             'dev_requirement' => true,
         ),
         'facade/ignition' => array(
-            'pretty_version' => '1.18.0',
-            'version' => '1.18.0.0',
+            'pretty_version' => '1.18.1',
+            'version' => '1.18.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../facade/ignition',
             'aliases' => array(),
-            'reference' => 'fca0cbe5f900f94773d821b481c16d4ea3503491',
+            'reference' => 'd173a101b3dbbd7a3a7b849ab388a7a7ef6d90bf',
             'dev_requirement' => true,
         ),
         'facade/ignition-contracts' => array(
@@ -421,7 +421,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'be97ff0cb20108f3059ee977a81b764bf644427e',
+            'reference' => '6f70e676ffe086c57b62daca25db3bed8d5ecfb1',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -499,12 +499,12 @@
             'dev_requirement' => true,
         ),
         'nesbot/carbon' => array(
-            'pretty_version' => '2.56.0',
-            'version' => '2.56.0.0',
+            'pretty_version' => '2.57.0',
+            'version' => '2.57.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nesbot/carbon',
             'aliases' => array(),
-            'reference' => '626ec8cbb724cd3c3400c3ed8f730545b744e3f4',
+            'reference' => '4a54375c21eea4811dbd1149fe6b246517554e78',
             'dev_requirement' => false,
         ),
         'nikic/php-parser' => array(
@@ -562,12 +562,12 @@
             'dev_requirement' => true,
         ),
         'phar-io/version' => array(
-            'pretty_version' => '3.1.1',
-            'version' => '3.1.1.0',
+            'pretty_version' => '3.2.1',
+            'version' => '3.2.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
-            'reference' => '15a90844ad40f127afd244c0cad228de2a80052a',
+            'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
             'dev_requirement' => true,
         ),
         'php-parallel-lint/php-console-color' => array(
@@ -616,12 +616,12 @@
             'dev_requirement' => true,
         ),
         'phpmailer/phpmailer' => array(
-            'pretty_version' => 'v6.5.3',
-            'version' => '6.5.3.0',
+            'pretty_version' => 'v6.5.4',
+            'version' => '6.5.4.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
             'aliases' => array(),
-            'reference' => 'baeb7cde6b60b1286912690ab0693c7789a31e71',
+            'reference' => 'c0d9f7dd3c2aa247ca44791e9209233829d82285',
             'dev_requirement' => false,
         ),
         'phpoption/phpoption' => array(
@@ -732,8 +732,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(

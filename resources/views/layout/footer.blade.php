@@ -4,15 +4,16 @@
         <div class="col-xl-9 col-lg-11 my-4" style="max-width: 1300px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="font-weight-bold my-2" style="font-size:40px;font-weight: 500">Sucursales y Centros de Servicio</h4>
+                    <h4 class="font-weight-bold my-2" style="font-size:40px;font-weight: 500">Jardepot Sucursales</h4>
                     <div class="row">
+
                         <div class="col-md-3" style="line-height: 1.5;">
                             <a class="link-footer" href="https://goo.gl/maps/X217x5HGYWMCLJqSA" target="_blank" rel="noopener">
                                 <p class="d-flex align-items-center my-2">
                                     <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Morelos</span>
                                 </p>
                                 <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
-                                    Av. Emiliano Zapata No. 129 Local 4<br> Colonia Tlaltenango, <br> Cuernavaca, Morelos 62170
+                                    Av. Emiliano Zapata #129 Local 4<br> Colonia Tlaltenango, <br> Cuernavaca, Morelos 62170
                                 </p>
                             </a>
                             <img src="{{asset('assets/images/otros/maps.jpg')}}" alt="Google Maps" title="google maps" style="width: 95%; height: 150px;">
@@ -21,13 +22,14 @@
                                 <p class="d-flex align-items-center my-2"><i class="material-icons fn-color-jd mr-2">access_time</i> Sabado / 9:00AM - 2:00PM</p>
                             </div>
                         </div>
+
                         <div class="col-md-3" style="line-height: 1.5;">
                             <a class="link-footer" href="https://goo.gl/maps/6eq7dv4uKsVuMfA36" target="_blank" rel="noopener">
                                 <p class="d-flex align-items-center my-2">
                                     <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Monterrey</span>
                                 </p>
                                 <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
-                                    San Bernabé 322,<br> Colonia Morelos,<br> Monterrey, N.L. 64180
+                                    San Bernabé #322,<br> Colonia Morelos,<br> Monterrey, N.L. 64180
                                 </p>
                             </a>
                             <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
@@ -384,19 +386,20 @@
                 <br>
                 <br>
                 10. Garantía de los productos adquiridos.
-                Jardepot actúa en calidad de distribuidor de fabricantes o distribuidores mayoristas que garantizan que los productos que se presentan a
-                la venta en el Sitio Web funcionan correctamente y no presentan defectos, ni vicios ocultos que puedan hacerlos peligrosos o inadecuados
-                para su uso normal. La garantía contractual ofrecida es la que habitualmente concede el proveedor y la misma será claramente detallada
-                en la ficha descriptiva de los productos. Una vez que el Usuario haya recibido el producto tendrá un folleto informativo que provee el
-                fabricante con las instrucciones suficientes para el correcto uso e instalación del producto y toda la información acerca de la garantía.
-                Ningún Usuario podrá reclamar una garantía más amplia de la que ahí se indica. Jardepot no estará obligado a recoger el producto averiado
-                y el Usuario deberá dirigirse al Servicio Posventa del Proveedor. En este sentido, Jardepot realizará las acciones encaminadas a proporcionar
-                a los Usuarios que así lo soliciten los datos de contacto de dicho servicio y facilitará a estos información suficiente para la presentación
-                de las reclamaciones pertinentes. La garantía perderá su vigencia en caso de defectos o deterioros causados por factores externos, accidentes,
-                en especial, accidentes eléctricos, desgaste, instalación y utilización no conforme a las instrucciones del Proveedor. Quedan excluidos de
-                la garantía los productos modificados o reparados por el Usuario o cualquier otra persona no autorizada por el proveedor. La garantía no será
-                aplicable a los vicios aparentes y los defectos de conformidad del producto, para los que cualquier reclamación deberá ser formulada por
-                el Usuario en cuestión en los 7 días siguientes a la entrega de los productos. La garantía no cubrirá los productos dañados por un uso inadecuado.
+                Jardepot actúa en calidad de comercio electrónico para fabricantes o importadores que garantizan que los productos que se presentan a la 
+                venta en el Sitio Web funcionan correctamente y no presentan defectos, ni vicios ocultos que puedan hacerlos peligrosos o inadecuados para 
+                su uso normal. La garantía contractual ofrecida es la que habitualmente concede el proveedor y la misma será claramente detallada en la ficha 
+                descriptiva de los productos. Una vez que el Usuario haya recibido el producto tendrá un folleto informativo que provee el fabricante con las 
+                instrucciones suficientes para el correcto uso e instalación del producto y toda la información acerca de la garantía. Ningún Usuario podrá reclamar 
+                una garantía más amplia de la que ahí se indica. Jardepot no estará obligado a recoger ningún producto averiado y el Usuario deberá dirigirse al 
+                Servicio Posventa del Fabricante o importador. En este sentido, Jardepot realizará las acciones encaminadas a proporcionar a los Usuarios que así 
+                lo soliciten los datos de contacto de dicho servicio y facilitará a estos, información suficiente para la presentación de las reclamaciones 
+                pertinentes. La garantía perderá su vigencia en caso de defectos o deterioros causados por factores externos, accidentes, en especial, 
+                accidentes eléctricos, desgaste, instalación y utilización no conforme a las instrucciones del Proveedor. Quedan excluidos de la garantía los productos
+                modificados o reparados por el Usuario o cualquier otra persona no autorizada por el proveedor. 
+                La garantía no será aplicable a los vicios aparentes y los defectos de conformidad del producto, para los que cualquier reclamación deberá ser 
+                formulada por el Usuario en cuestión en los 7 días siguientes a la entrega de los productos. La garantía no cubrirá los productos dañados por un uso 
+                inadecuado.
                 <br>
                 <br>
                 11. Propiedad intelectual e industrial.

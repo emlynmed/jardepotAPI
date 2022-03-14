@@ -34,14 +34,14 @@
                 <div class="row" style="padding: 3%">
                     <p class="text-center col-12 title-muted">Organizar por {{$textFilter}}:</p>
                     @foreach ($filters as $keyFilter => $itemFilter)
-                        @php
+                    @php
                             $url = route('products2', ['categoryLevel1'=> strtolower(str_replace(" ", "-", $level1)),
                                         'categoryLevel2'=> strtolower(str_replace(" ", "-", $level2)), 'categoryLevel3'=> strtolower(str_replace(" ", "-", $itemFilter['name']))]);
                         @endphp
                         @if(strtolower($level1) == "marcas")
                             <div class="text-center col-6 my-1 p-1">
                                 <div class="btn-group-toggle filter" data-toggle="buttons">
-                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-sm btn-filter-2 btn-no-border
+                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-sm btn-block 
                                             {{$idFilter == $itemFilter['id']?"active-filter bg-color-jd active":""}}" onclick="function noclick(e) { e.stopPropagation();}"
                                         href="@if(isset($redirectors[$url])){{ $redirectors[$url] }}@else{{ $url }}@endif" >
                                         {{$itemFilter['name']}}
@@ -51,10 +51,11 @@
                         @else
                             <div class="text-center col-6 my-1 p-1">
                                 <div class="btn-group-toggle filter" data-toggle="buttons">
-                                    <label class="btn btn-secondary btn-sm btn-filter btn-no-border" title="{{$itemFilter['name']}}"
-                                            style="height: {{strlen($itemFilter['name'])>15?"40":"20"}}px" data-val="{{$itemFilter['id']}}">
-                                        <input type="checkbox"> {{$itemFilter['name']}}
-                                    </label>
+                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-sm btn-block 
+                                            {{$idFilter == $itemFilter['id']?"active-filter bg-color-jd active":""}}" onclick="function noclick(e) { e.stopPropagation();}"
+                                        href="@if(isset($redirectors[$url])){{ $redirectors[$url] }}@else{{ $url }}@endif" >
+                                        {{$itemFilter['name']}}
+                                    </a>
                                 </div>
                             </div>
                         @endif
