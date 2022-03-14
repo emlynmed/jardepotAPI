@@ -47,7 +47,6 @@
     }
 
 
-
 </style>
 
     <div class="wrapper">
@@ -119,7 +118,6 @@
                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                    aria-expanded="false">
                                     Mostrar <span class="current-number-items">20</span>
-
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -147,24 +145,6 @@
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">
-
-                                    Mostrar <span class="current-number-items">20</span>
-
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
-                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
-                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,7 +300,7 @@
                             <span>Filtros y secciones</span>
                         </button>
                         <div class="row pagination-container">
-                            <div class="col-12" style="border-radius: 5px;overflow: hidden;">
+                            <div class="col-12" style="border-radius: 5px;overflow: hidden scrollmenu;">
                                 <nav aria-label="Search results products">
                                     <ul class="pagination d-flex justify-content-center align-items-center my-2">
                                         <li class="page-item previous-page disabled">
