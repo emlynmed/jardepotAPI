@@ -41,7 +41,11 @@
                         @if(strtolower($level1) == "marcas")
                             <div class="text-center col-6 my-1 p-1">
                                 <div class="btn-group-toggle filter" data-toggle="buttons">
+<<<<<<< HEAD
                                     <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-sm btn-block 
+=======
+                                    <a data-val="{{$itemFilter['id']}}" title="{{$itemFilter['name']}}" class="btn btn-secondary btn-block 
+>>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
                                             {{$idFilter == $itemFilter['id']?"active-filter bg-color-jd active":""}}" onclick="function noclick(e) { e.stopPropagation();}"
                                         href="@if(isset($redirectors[$url])){{ $redirectors[$url] }}@else{{ $url }}@endif" >
                                         {{$itemFilter['name']}}

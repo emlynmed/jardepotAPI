@@ -39,12 +39,22 @@
         @slot('level2', $categoryLevel2)
     @endcomponent
 
+<<<<<<< HEAD
 <style>
     div.scrollmenu {
     overflow: auto;
     white-space: nowrap;
     padding: col-12;
     }
+=======
+    <style>
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  padding: col-12;
+}
+
+>>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
 
 
 
@@ -114,6 +124,7 @@
                             <i class="material-icons mr-2">menu</i>
                             <span>Filtros y secciones</span>
                         </button>
+<<<<<<< HEAD
                         <div class="dropdown">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -128,6 +139,9 @@
                                     <a class="dropdown-item number-items" data-val="60" href="#">60</a>
                                 </div>
                             </div>
+=======
+
+>>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
                         <div class="row pagination-container">
                             <div class="col-12 ;">
                                 <nav aria-label="Search results products">
@@ -149,7 +163,27 @@
                                 </nav>
                             </div>
                         </div>
+<<<<<<< HEAD
                             
+=======
+
+                        <div>
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+
+                                    Mostrar <span class="current-number-items">20</span>
+
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
+                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
+                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
+                                </div>
+                            </div>
+>>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
                         </div>
                     </div>
                     <div id="cards-sections" class="row">
