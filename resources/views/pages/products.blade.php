@@ -39,22 +39,12 @@
         @slot('level2', $categoryLevel2)
     @endcomponent
 
-<<<<<<< HEAD
 <style>
     div.scrollmenu {
     overflow: auto;
     white-space: nowrap;
     padding: col-12;
     }
-=======
-    <style>
-div.scrollmenu {
-  overflow: auto;
-  white-space: nowrap;
-  padding: col-12;
-}
-
->>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
 
 
 
@@ -124,7 +114,6 @@ div.scrollmenu {
                             <i class="material-icons mr-2">menu</i>
                             <span>Filtros y secciones</span>
                         </button>
-<<<<<<< HEAD
                         <div class="dropdown">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -139,9 +128,6 @@ div.scrollmenu {
                                     <a class="dropdown-item number-items" data-val="60" href="#">60</a>
                                 </div>
                             </div>
-=======
-
->>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
                         <div class="row pagination-container">
                             <div class="col-12 ;">
                                 <nav aria-label="Search results products">
@@ -163,9 +149,6 @@ div.scrollmenu {
                                 </nav>
                             </div>
                         </div>
-<<<<<<< HEAD
-                            
-=======
 
                         <div>
                             <div class="dropdown">
@@ -183,7 +166,6 @@ div.scrollmenu {
                                     <a class="dropdown-item number-items" data-val="60" href="#">60</a>
                                 </div>
                             </div>
->>>>>>> e61b53cdce9b4fe2ea15144d08deab7c0a17fa93
                         </div>
                     </div>
                     <div id="cards-sections" class="row">
