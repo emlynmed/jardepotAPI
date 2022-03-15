@@ -101,7 +101,7 @@
 
                     <div class="row border shadow rounded bg-dark my-2 text-white px-2 d-flex justify-content-between align-items-center scrollmenu">
                         <div class="d-flex justify-content-center align-items-center">
-                            <p>Ordenar por:</p>
+                            <p>Ordenar por: </p>
                             <select id="orderBy" class="form-control">
                                 <option value="default">Relevancia</option>
                                 <option value="ASC">Menor Precio</option>
@@ -113,19 +113,6 @@
                             <i class="material-icons mr-2">menu</i>
                             <span>Filtros y secciones</span>
                         </button>
-                        <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">
-                                    Mostrar <span class="current-number-items">20</span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
-                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
-                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
-                                </div>
-                            </div>
                         <div class="row pagination-container">
                             <div class="col-12 ;">
                                 <nav aria-label="Search results products">
@@ -147,6 +134,20 @@
                                 </nav>
                             </div>
                         </div>
+                        <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Mostrar <span class="current-number-items">20</span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item number-items" data-val="20" href="#" id="eight-products">20</a>
+                                    <a class="dropdown-item number-items" data-val="40" href="#">40</a>
+                                    <a class="dropdown-item number-items" data-val="60" href="#">60</a>
+                                </div>
+                        </div>
+
                     </div>
                     <div id="cards-sections" class="row">
                         @foreach($products as $key => $item)

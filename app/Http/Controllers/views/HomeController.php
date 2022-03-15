@@ -146,5 +146,79 @@ class HomeController extends Controller
         return 'exito';
     }
 
+    public function getAvisoPrivacidad(){
+        $menuRepository = new MenuRepository();
+        $productoRepository = new ProductRepository();
+        $categoriasNivel1 = $menuRepository->getAdditional2();
+        $menuAdditional=[];
+        foreach ($categoriasNivel1 as $key => $categoria1) {
+            $menuAdditional[$key]['nivel1'] = $categoria1->name;
+            $categoriasNivel2 = $menuRepository->getNivel2($categoria1->id);
+            foreach ($categoriasNivel2 as $key2 => $categoria2){
+                $menuAdditional[$key]['nivel2'][$key2]['name'] = $categoria2->name;
+                $niv1 = str_replace(' ','-', $categoria1->name);
+                $niv2 = str_replace(' ','-',$categoria2->name);
+                $href = strtr($niv1.'/'.$niv2, $this->unwanted_array);
+                $url = strtolower(url($href));
+                $url = isset($this->redirectors[$url]) ? $this->redirectors[$url] : $url;
+                $menuAdditional[$key]['nivel2'][$key2]['href'] = $url;
+            }
+        }
+        $descriptionLevel2 = $productoRepository->getDescriptionNivel2(0);
+//        Obtenemos las imagenes del banner
+        $path = public_path() . '/assets/images/banner';
+        $dir = opendir($path);
+        $images = [];
+        $cont=0;
+        // Leo todos los ficheros de la carpeta
+        while ($elemento = readdir($dir)) {
+            if ($elemento != "." && $elemento != "..") {
+                // Si no es una carpeta
+                if (!is_dir($path . $elemento)) {
+                    $images[$cont] = $elemento;
+                    $cont++;
+                }
+            }
+        }
+        return view('pages/avisoPrivacidad',compact('menuAdditional','descriptionLevel2','images'));
+    }
+
+    public function getAvisoLegal(){
+        $menuRepository = new MenuRepository();
+        $productoRepository = new ProductRepository();
+        $categoriasNivel1 = $menuRepository->getAdditional2();
+        $menuAdditional=[];
+        foreach ($categoriasNivel1 as $key => $categoria1) {
+            $menuAdditional[$key]['nivel1'] = $categoria1->name;
+            $categoriasNivel2 = $menuRepository->getNivel2($categoria1->id);
+            foreach ($categoriasNivel2 as $key2 => $categoria2){
+                $menuAdditional[$key]['nivel2'][$key2]['name'] = $categoria2->name;
+                $niv1 = str_replace(' ','-', $categoria1->name);
+                $niv2 = str_replace(' ','-',$categoria2->name);
+                $href = strtr($niv1.'/'.$niv2, $this->unwanted_array);
+                $url = strtolower(url($href));
+                $url = isset($this->redirectors[$url]) ? $this->redirectors[$url] : $url;
+                $menuAdditional[$key]['nivel2'][$key2]['href'] = $url;
+            }
+        }
+        $descriptionLevel2 = $productoRepository->getDescriptionNivel2(0);
+//        Obtenemos las imagenes del banner
+        $path = public_path() . '/assets/images/banner';
+        $dir = opendir($path);
+        $images = [];
+        $cont=0;
+        // Leo todos los ficheros de la carpeta
+        while ($elemento = readdir($dir)) {
+            if ($elemento != "." && $elemento != "..") {
+                // Si no es una carpeta
+                if (!is_dir($path . $elemento)) {
+                    $images[$cont] = $elemento;
+                    $cont++;
+                }
+            }
+        }
+        return view('pages/avisoLegal',compact('menuAdditional','descriptionLevel2','images'));
+    }
+
     /*    public function getIpClient(Request $request){return $request->ip().''.$request->url();}*/
 }

@@ -82,3 +82,6 @@ Route::get('tracking', function () {
 
 Route::post('tracking/getGuia', 'views\TrackingController@getGuia')->name('getguia');
 
+Route::get('/aviso-privacidad', 'views\HomeController@getAvisoPrivacidad')->name('avisoPrivacidad');
+Route::get('/aviso-legal', 'views\HomeController@getAvisoLegal')->name('avisoLegal');
+
