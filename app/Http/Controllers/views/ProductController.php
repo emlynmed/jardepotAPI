@@ -43,29 +43,14 @@ class ProductController extends Controller {
             }
         }
         $sidebar = $categoriasNivel1;
-        if($productType.'-'.$brand == 'hilo-nylon'){
-            $productType = $productType.'-'.$brand;
-            $brand = explode("-", $mpn)[0];
-            $mpn1 = explode("-", $mpn)[1];
-            if(isset( explode("-", $mpn)[2])){
-                $mpn = $mpn1.'-'.explode("-", $mpn)[2];
-            }else{
-                $mpn = $mpn1;
-            }
-        }else if($this->productoRepository->brandExiste($brand) == false){
+        //Validacion de como vienen los parametros
+        $arr = $this->getData($productType, $brand, $mpn);
+        //var_dump($arr);
 
-            if(isset( explode("-", $mpn)[2])){
-
-                $brand = $brand.'-'. explode("-", $mpn)[0];
-                $mpn = explode("-", $mpn)[1].'-'.explode("-", $mpn)[2];
-
-            }else if(isset( explode("-", $mpn)[1])){
-
-                $brand = $brand.'-'. explode("-", $mpn)[0];
-                $mpn = explode("-", $mpn)[1];
-            }
-        }
-        $brand = str_replace("-", " ", $brand);
+        //Fin
+        $productType = $arr['type'];
+        $brand = str_replace("-", " ", $arr['brand']);
+        $mpn =  $arr['mpn'];
 
         $ipl = $this->productoRepository->getIpls($productType, $brand, $mpn);
         $ipl = count($ipl);
@@ -87,6 +72,45 @@ class ProductController extends Controller {
         }else{
             return view('errors/404');
         }
+    }
+
+    public function getData($type,$brand,$mpn){
+
+        if($type.'-'.$brand == 'hilo-nylon'){
+            $type = $type.'-'.$brand;
+            $arrexp=explode("-", $mpn);
+            $brand = $arrexp[0];
+
+            if($this->productoRepository->brandExiste($brand) == false){
+                $mpn1 = explode("-", $mpn)[1];
+                if(isset( explode("-", $mpn)[2])){
+                    $mpn = $mpn1.'-'.explode("-", $mpn)[2];
+                }else{
+                    $mpn = $mpn1;
+                }
+            }else{
+                $brand = explode("-", $mpn)[0];
+                $mpn='';
+                for ($i=1;$i<sizeof($arrexp);$i++){
+                    $mpn.=  ($i==1 ? $arrexp[$i] : '-'.$arrexp[$i]);
+                }
+            }
+
+        }else if($this->productoRepository->brandExiste($brand) == false){
+
+            if(isset( explode("-", $mpn)[2])){
+
+                $brand = $brand.'-'. explode("-", $mpn)[0];
+                $mpn = explode("-", $mpn)[1].'-'.explode("-", $mpn)[2];
+
+            }else if(isset( explode("-", $mpn)[1])){
+
+                $brand = $brand.'-'. explode("-", $mpn)[0];
+                $mpn = explode("-", $mpn)[1];
+            }
+        }
+
+        return array('type'=>$type,'brand'=>$brand,'mpn'=>$mpn);
     }
 
     public function sendSearch(Request $request) {
