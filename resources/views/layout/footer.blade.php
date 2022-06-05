@@ -10,7 +10,7 @@
                         <div class="col-md-3" style="line-height: 1.5;">
                             <a class="link-footer" href="https://goo.gl/maps/X217x5HGYWMCLJqSA" target="_blank" rel="noopener">
                                 <p class="d-flex align-items-center my-2">
-                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Morelos</span>
+                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Cuernavaca</span>
                                 </p>
                                 <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
                                     Av. Emiliano Zapata #129 Local 4<br> Colonia Tlaltenango, <br> Cuernavaca, Morelos 62170
@@ -33,6 +33,18 @@
                                 </p>
                             </a>
                             <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
+                        </div>
+                        <div class="col-md-3" style="line-height: 1.5;">
+                            <a class="link-footer" rel="noopener">
+{{--                            <a class="link-footer" href="https://goo.gl/maps/6eq7dv4uKsVuMfA36" target="_blank" rel="noopener">--}}
+                                <p class="d-flex align-items-center my-2">
+                                    <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Guadalajara</span>
+                                </p>
+                                <p style="font-size: 16px" class="d-flex align-items-center my-2 ml-4">
+                                    San Antonio #44,<br> Colonia los Cajetes,<br> Zapopan, Jal. 45234
+                                </p>
+                            </a>
+                            <img src="{{asset('assets/images/otros/maps3.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
                         </div>
                     </div>
                 </div>

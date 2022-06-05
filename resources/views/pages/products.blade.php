@@ -35,8 +35,9 @@
 
 @section('content')
     @component('components.breadcrumb')
-        @slot('level1', $categoryLevel1)
-        @slot('level2', $categoryLevel2)
+        @slot('level1', $level1Bread)
+        @slot('level2', $level2Bread)
+        @slot('level3', $level3Bread)
     @endcomponent
 
 <style>
@@ -119,9 +120,9 @@
                                     <ul class="pagination d-flex justify-content-center align-items-center my-2">
                                         <li class="page-item previous-page disabled display: inline-block;">
                                             <a class=" page-link" data-val="--" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                                         </li>      
+                                         </li>
                                         </li>
-                                         </li>      
+                                         </li>
                                         @for ($i = 0; $i < $numberPages; $i++)
                                             <li class="page-item number-page @if($i == 0) active @endif">
                                                 <a class="page-link" data-val="{{ $i+1 }}" href="#">{{ $i+1 }}</a>
@@ -151,7 +152,7 @@
                     </div>
                     <div id="cards-sections" class="row">
                         @foreach($products as $key => $item)
-                            <div class="card shadow-sm product-item col-sm-6 col-md-4 col-lg-3 p-0 mt-2 @if($loop->iteration > 16) d-none  @endif"
+                            <div class="card shadow-sm product-item col-sm-6 col-md-4 col-lg-3 p-0 mt-2 @if($loop->iteration > 20) d-none  @endif"
                                 style="border-radius: 5px;overflow: hidden;">
                                 <a href="{{route('product',
                                 ['marca'=> str_replace(" ", "-",strtolower($item['brand'])), 'productType'=> strtolower($item['productType']), 'brand'=> str_replace(" ", "-",strtolower($item['brand'])), 'mpn'=> strtolower($item['mpn'])])}}">
@@ -247,7 +248,7 @@
                             </div>
                         @endforeach
                     </div>
-                    
+
                     <div class="row border shadow bg-white rounded mt-2 pagination-container scrollmenu">
                         <div class="">
                             <nav aria-label="Search results products">
@@ -335,7 +336,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="cards-sections-search" class="row">
                         @foreach($productsListSearch as $key => $item)
                             <div class="card shadow-sm product-item col-sm-6 col-md-4 col-lg-3 p-0 mt-2 @if($loop->iteration > 16) d-none  @endif"

@@ -9,6 +9,7 @@ use App\Http\Controllers\MenuController;
 use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Repositories\MenuRepository;
 
 class ProductsController extends Controller {
 
@@ -16,7 +17,6 @@ class ProductsController extends Controller {
     private $productoRepository;
     public function __construct() {
         setlocale(LC_MONETARY, 'en_US');
-        $this->comprobarMoneyFormat();
         $this->productoRepository = new ProductRepository();
         $this->unwanted_array = array('Š' => 'S', 'š' => 's', 'Ž' => 'Z', 'ž' => 'z', 'À' => 'A', 'Á' => 'A',
             'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'A', 'Ç' => 'C', 'È' => 'E', 'É' => 'E', 'Ê' => 'E',
@@ -54,7 +54,7 @@ class ProductsController extends Controller {
             $products = $productController->getProductsList($idNivel2);
 
             $products = $this->porductModelFormat($products);
-            $numberPages = count($products) / 16;
+            $numberPages = count($products) / 20;
             $filters = $productController->getSectionsLevel3($categoryLevel1, $categoryLevel2);
             $descriptionLevel2 = $productController->getDescriptionLevel2($categoryLevel1, $categoryLevel2);
 
@@ -66,7 +66,12 @@ class ProductsController extends Controller {
             }
             $idFilter = 0;
             $canonical = url()->current();
-            return view('pages/products', compact('idFilter', 'sidebar', 'categoryLevel1', 'categoryLevel2', 'products', 'numberPages', 'filters', 'textFilter', 'descriptionLevel2','canonical'));
+
+            $level1Bread = $categoryLevel1;
+            $level2Bread = $categoryLevel2;
+            $level3Bread = NULL;
+
+            return view('pages/products', compact('idFilter', 'sidebar', 'categoryLevel1', 'categoryLevel2', 'products', 'numberPages', 'filters', 'textFilter', 'descriptionLevel2','canonical','level1Bread','level2Bread','level3Bread'));
         }else{
             return view('errors/404');
            /* $redir = $this->redirurls($categoriasUrl);
@@ -132,6 +137,9 @@ class ProductsController extends Controller {
         $categoryLevel1 = str_replace("-", " ", ucfirst($categoryLevel1));
         $categoryLevel2 = str_replace("-", " ", ucfirst($categoryLevel2));
         $categoryLevel3 = str_replace("-", " ", ucfirst($categoryLevel3));
+        $level1Bread = $categoryLevel1;
+        $level2Bread = $categoryLevel2;
+        $level3Bread = $categoryLevel3;
         $menuController = new MenuController();
         $categoriasNivel1 = $menuController->getSidebar();
         foreach ($categoriasNivel1 as $key => $categoria1) {
@@ -154,14 +162,51 @@ class ProductsController extends Controller {
         $filters = $productController->getSectionsLevel3($categoryLevel1, $categoryLevel2);
         $descriptionLevel2 =$this->productoRepository->getDescriptionLevel3($categoryLevel1, $categoryLevel2, $categoryLevel3);
 
-        $textFilter = "";
-        if($categoryLevel1 == "Marcas" || $categoryLevel1 == "Refacciones"){
-            $textFilter = "equipos";
+        if($descriptionLevel2 == 'negativo'){
+            $menuRepository = new MenuRepository();
+            $productoRepository = new ProductRepository();
+            $categoriasNivel1 = $menuRepository->getAdditional2();
+            $menuAdditional=[];
+            foreach ($categoriasNivel1 as $key => $categoria1) {
+                $menuAdditional[$key]['nivel1'] = $categoria1->name;
+                $categoriasNivel2 = $menuRepository->getNivel2($categoria1->id);
+                foreach ($categoriasNivel2 as $key2 => $categoria2){
+                    $menuAdditional[$key]['nivel2'][$key2]['name'] = $categoria2->name;
+                    $niv1 = str_replace(' ','-', $categoria1->name);
+                    $niv2 = str_replace(' ','-',$categoria2->name);
+                    $href = strtr($niv1.'/'.$niv2, $this->unwanted_array);
+                    $url = strtolower(url($href));
+                    $url = isset($this->redirectors[$url]) ? $this->redirectors[$url] : $url;
+                    $menuAdditional[$key]['nivel2'][$key2]['href'] = $url;
+                }
+            }
+            $descriptionLevel2 = $productoRepository->getDescriptionNivel2(0);
+    //        Obtenemos las imagenes del banner
+            $path = public_path() . '/assets/images/banner';
+            $dir = opendir($path);
+            $images = [];
+            $cont=0;
+            // Leo todos los ficheros de la carpeta
+            while ($elemento = readdir($dir)) {
+                if ($elemento != "." && $elemento != "..") {
+                    // Si no es una carpeta
+                    if (!is_dir($path . $elemento)) {
+                        $images[$cont] = $elemento;
+                        $cont++;
+                    }
+                }
+            }
+            return view('pages/home',compact('menuAdditional','descriptionLevel2','images'));
         }else{
-            $textFilter = "marcas";
+            $textFilter = "";
+            if($categoryLevel1 == "Marcas" || $categoryLevel1 == "Refacciones"){
+                $textFilter = "equipos";
+            }else{
+                $textFilter = "marcas";
+            }
+            $canonical = url()->current();;
+            return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'products', 'numberPages', 'filters', 'textFilter', 'descriptionLevel2', 'idFilter','canonical','level1Bread','level2Bread','level3Bread'));
         }
-        $canonical = url()->current();;
-        return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'products', 'numberPages', 'filters', 'textFilter', 'descriptionLevel2', 'idFilter','canonical'));
     }
 
     public function productsSaleList(){
@@ -192,13 +237,20 @@ class ProductsController extends Controller {
 
         $productsListSearch = $this->porductModelFormat($productsListSearch);
 
+
+        /**BREADCRUMBS */
+        $level1Bread = $categoryLevel1;
+        $level2Bread = NULL;
+        $level3Bread = NULL;
+        
+
         $canonical = url()->current();
         if (count($productsListSearch) == 0) {
             return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'productsListSearch', 'numberPages', 'descriptionLevel2','canonical'));
         }
 
         $numberPages = count($productsListSearch) / 16;
-        return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'productsListSearch', 'numberPages', 'descriptionLevel2','canonical'));
+        return view('pages/products', compact('sidebar', 'categoryLevel1', 'categoryLevel2', 'productsListSearch', 'numberPages', 'descriptionLevel2','canonical','level1Bread','level2Bread','level3Bread'));
     }
 
     public function getProductsListSearch($word){
@@ -644,6 +696,36 @@ class ProductsController extends Controller {
 
         */
         return "exito";
+    }
+    public function getCategory($category){
+        $productRepository = new ProductRepository();
+        $productController = new ProductController();
+        $categoria = $category;
+        $productos = "";
+        $data = $productRepository->getProductsRelatedByCategory($categoria);
+
+
+      
+        $related = $productController->model_format_products($data,'related');
+        
+        $menuController = new MenuController();
+
+        $lista = $productRepository->getCategoryData($categoria);
+        
+        $categoryLevel1 = "cat";
+        $categoryLevel2 = $category;
+        
+        $descriptionLevel2 = new \stdClass();
+        $descriptionLevel2->metadescription = "Busca los productos que necesites Jardepot";
+        $descriptionLevel2->keywords = "Busca los productos que necesites Jardepot";
+        $descriptionLevel2->metatitle = "Jardepot, el lugar donde encuentras todo lo que necesitas";
+
+
+        $canonical = url()->current();
+        
+
+       
+        return view('pages/category', compact('categoryLevel1', 'categoryLevel2', 'canonical','lista','related'));
     }
 
     

@@ -14,3 +14,7 @@ yarn-error.log
 /public/assets/js/path.js
 /public/rfcs/*
 /public/img
+.htaccess
+/public/sitemap.xml
+/public/sitemap_categorias.xml
+/public/sitemap_productos.xml

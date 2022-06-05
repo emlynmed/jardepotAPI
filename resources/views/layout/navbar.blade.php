@@ -193,7 +193,7 @@
         </div>
 
 
-      
+
         <div class="col-sm " style="padding: 50; line-height: 45px; height: 30px   ">
             <div style="font-size: 28px;" class="col-sm text-barra text-center">
                 ¡Llámanos!
@@ -202,7 +202,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="container-xl" style="height: 82px !important">
             <div class="container ">
                 <div class="row">
@@ -365,7 +365,8 @@
                             <li class="nav-item dropdown mr-xl-4 ml-md-1 ml-xl-2 column-items ml-xxs-n1" id="prueba1"
                                 style="@if($key == 0){{ 'margin-left:-1.7rem;' }}@endif">
                                 <a class="d-flex flex-wrap justify-content-center align-items-center"
-                                    title="{{$categoria1['nivel1']}}" href="javascript:;">
+{{--                                    title="{{$categoria1['nivel1']}}" href="{{route('category',['category'=>$categoria1['nivel1'] ])}}">--}}
+                                    title="{{$categoria1['nivel1']}}" href="#">
                                     {{$categoria1['nivel1']}}
                                 </a>
                                 @if(isset($categoria1['nivel2']))

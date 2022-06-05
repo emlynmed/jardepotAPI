@@ -4,6 +4,7 @@
 namespace App\Repositories;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\Controller;
 
 
 class ProductRepository{
@@ -34,6 +35,7 @@ class ProductRepository{
                     ->on("productos.brand","=","inventario.brand")
                     ->on("productos.mpn","=","inventario.mpn");
             })
+
             ->select(
                 'productos.id','productos.productType', 'productos.brand',
                 'productos.mpn', 'productos.description', 'productos.availability',
@@ -283,12 +285,17 @@ class ProductRepository{
                     ->on("productos.mpn",'=' , "productosCategoriasNivel3.mpn");
             })
             ->join('categoriasNivel3 as c3', 'c3.idCategoriasNivel3', '=', 'productosCategoriasNivel3.idCategoriasNivel3')
+            ->leftJoin('categoriasnivel2', 'categoriasnivel2.idCategoriasNivel2','=','c3.idCategoriasNivel2')
+            ->leftJoin('categoriasnivel1', 'categoriasnivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
             ->leftJoin("inventario",function($join){
                 $join->on("productos.productType","=","inventario.productType")
                     ->on("productos.brand","=","inventario.brand")
                     ->on("productos.mpn","=","inventario.mpn");
             })
+
             ->select(
+                'categoriasnivel2.nombreCategoriaNivel2',
+                'categoriasNivel1.nombreCategoriaNivel1',
                 'productos.id',
                 'productos.productType',
                 'productos.brand',
@@ -726,20 +733,21 @@ class ProductRepository{
                 "categoriasNivel3.idCategoriasNivel3" ,"=",$id3
             )->first();
 
-        if($texto->metatitle == ''){
-            $texto->metatitle = 'Encuentra '.$texto->nombreCategoriaNivel2.' de venta en tu tienda en linea.';
-        }
+            if($texto->metatitle == ''){
+                $texto->metatitle = 'Encuentra '.$texto->nombreCategoriaNivel2.' de venta en tu tienda en linea.';
+            }
 
-        if($texto->metadescription == ''){
-            $texto->metadescription = $texto->nombreCategoriaNivel2.' - Catálogo y precios';
-        }
+            if($texto->metadescription == ''){
+                $texto->metadescription = $texto->nombreCategoriaNivel2.' - Catálogo y precios';
+            }
 
-        if($texto->texto == ''){
-            $texto->texto = $texto->nombreCategoriaNivel2;
-        }
-        $texto->keywords = $this->singular($texto->nombreCategoriaNivel2);
+            if($texto->texto == ''){
+                $texto->texto = $texto->nombreCategoriaNivel2;
+            }
+            $texto->keywords = $this->singular($texto->nombreCategoriaNivel2);
 
-        return $texto;
+            return $texto;
+
     }
 
     public function getProductsSearch2($busqueda){
@@ -1315,5 +1323,105 @@ class ProductRepository{
             ->get();
         return $ids;
     }
+
+
+    public function getCategoryData($category){
+        $categoria = $category;
+        $categorias = DB::table('categoriasNivel2')
+            ->leftJoin('categoriasNivel1', 'categoriasNivel2.idCategoriasNivel1','=','categoriasNivel1.idCategoriasNivel1')
+            ->select('categoriasNivel2.nombreCategoriaNivel2','categoriasNivel2.prioridad')
+            ->where('nombreCategoriaNivel1', '=', $categoria)
+            ->orderBy('categoriasNivel2.prioridad', 'asc')
+            ->get();
+
+        return $categorias;
+    }
+    public function getProductsByCategory($category){
+        $categoria = $category;
+        $productos = DB::table('xml')
+            ->leftJoin('productoscategoriasnivel3', 'xml.mpn','=','productoscategoriasnivel3.mpn')
+            ->leftJoin('categoriasnivel3', 'categoriasnivel3.idCategoriasNivel3','=','productoscategoriasnivel3.idCategoriasNivel3')
+            ->leftJoin('categoriasNivel2', 'categoriasNivel2.idCategoriasNivel2','=','categoriasNivel3.idCategoriasNivel2')
+
+            ->leftJoin('categoriasnivel1', 'categoriasnivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
+            ->where('nombreCategoriaNivel1', '=', $categoria)
+
+            ->get();
+
+            return $productos;
+
+    }
+    public function getProductsRelatedByCategory($category){
+        $datos = DB::table('productos')
+            ->join("productosCategoriasNivel3", function ($join){
+                $join->on("productos.productType",'=' , "productosCategoriasNivel3.productType")
+                    ->on("productos.brand",'=' , "productosCategoriasNivel3.brand")
+                    ->on("productos.mpn",'=' , "productosCategoriasNivel3.mpn");
+            })
+            ->join('categoriasNivel3 as c3', 'c3.idCategoriasNivel3', '=', 'productosCategoriasNivel3.idCategoriasNivel3')
+            ->leftJoin("inventario",function($join){
+                $join->on("productos.productType","=","inventario.productType")
+                    ->on("productos.brand","=","inventario.brand")
+                    ->on("productos.mpn","=","inventario.mpn");
+            })
+            ->leftJoin('categoriasNivel2', 'categoriasNivel2.idCategoriasNivel2','=','c3.idCategoriasNivel2')
+            ->leftJoin('categoriasnivel1', 'categoriasnivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
+            ->select(
+                'productos.id',
+                'productos.productType',
+                'productos.brand',
+                'productos.mpn',
+                'productos.description',
+                'productos.availability',
+                'productos.price',
+                'productos.oferta',
+                'productos.PrecioDeLista',
+                'productos.offer',
+                'productos.iva',
+                'productos.video',
+                'productos.volada',
+                'productos.visible',
+                DB::raw('SUM(productosCategoriasNivel3.priceVisible) as priceVisible'),
+                DB::raw('SUM(inventario.cantidad) as cantidadInventario')
+            )
+            ->where([
+                ['categoriasnivel1.nombreCategoriaNivel1', $category],
+
+            ])
+            ->groupBy('productos.productType','productos.brand','productos.mpn' )
+            ->orderBy('cantidadInventario', 'desc')
+            ->limit(8)
+            ->get();
+
+        return $datos;
+    }
+
+    public function getBreadCrumbsData($mpn){
+        $datos = DB::table('productos')
+            ->join("productosCategoriasNivel3", function ($join){
+                $join->on("productos.productType",'=' , "productosCategoriasNivel3.productType")
+                    ->on("productos.brand",'=' , "productosCategoriasNivel3.brand")
+                    ->on("productos.mpn",'=' , "productosCategoriasNivel3.mpn");
+            })
+            ->join('categoriasNivel3 as c3', 'c3.idCategoriasNivel3', '=', 'productosCategoriasNivel3.idCategoriasNivel3')
+            ->leftJoin("inventario",function($join){
+                $join->on("productos.productType","=","inventario.productType")
+                    ->on("productos.brand","=","inventario.brand")
+                    ->on("productos.mpn","=","inventario.mpn");
+            })
+            ->leftJoin('categoriasNivel2', 'categoriasNivel2.idCategoriasNivel2','=','c3.idCategoriasNivel2')
+            ->leftJoin('categoriasNivel1', 'categoriasNivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
+            ->select(
+                'categoriasNivel1.nombreCategoriaNivel1',
+                'categoriasNivel2.nombreCategoriaNivel2'
+            )
+            ->where([
+                ['categoriasNivel1.ubicacion', 'navbar'],
+                ['productos.mpn',$mpn]
+            ])
+            ->get();
+            return $datos;
+    }
+
 
 }

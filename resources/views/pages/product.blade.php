@@ -82,8 +82,8 @@
 @section('content')
     <input type="hidden" id="current-product" data-producttype="{{$product['productType']}}" data-brand="{{$product['brand']}}" data-mpn="{{$product['mpn']}}">
     @component('components.breadcrumb')
-        @slot('level1', 'Marcas')
-        @slot('level2', $product['brand'])
+        @slot('level1', $nivel1Bread)
+        @slot('level2', $nivel2Bread)
         @slot('level3', $product['name'])
     @endcomponent
     <div class="wrapper">

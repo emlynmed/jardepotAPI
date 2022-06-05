@@ -220,5 +220,7 @@ class HomeController extends Controller
         return view('pages/avisoLegal',compact('menuAdditional','descriptionLevel2','images'));
     }
 
+    
+
     /*    public function getIpClient(Request $request){return $request->ip().''.$request->url();}*/
 }
