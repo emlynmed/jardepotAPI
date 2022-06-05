@@ -285,8 +285,8 @@ class ProductRepository{
                     ->on("productos.mpn",'=' , "productosCategoriasNivel3.mpn");
             })
             ->join('categoriasNivel3 as c3', 'c3.idCategoriasNivel3', '=', 'productosCategoriasNivel3.idCategoriasNivel3')
-            ->leftJoin('categoriasnivel2', 'categoriasnivel2.idCategoriasNivel2','=','c3.idCategoriasNivel2')
-            ->leftJoin('categoriasnivel1', 'categoriasnivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
+            ->leftJoin('categoriasNivel2', 'categoriasNivel2.idCategoriasNivel2','=','c3.idCategoriasNivel2')
+            ->leftJoin('categoriasNivel1', 'categoriasNivel1.idCategoriasNivel1','=','categoriasNivel2.idCategoriasNivel1')
             ->leftJoin("inventario",function($join){
                 $join->on("productos.productType","=","inventario.productType")
                     ->on("productos.brand","=","inventario.brand")
@@ -294,7 +294,7 @@ class ProductRepository{
             })
 
             ->select(
-                'categoriasnivel2.nombreCategoriaNivel2',
+                'categoriasNivel2.nombreCategoriaNivel2',
                 'categoriasNivel1.nombreCategoriaNivel1',
                 'productos.id',
                 'productos.productType',
