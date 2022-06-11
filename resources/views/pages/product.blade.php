@@ -225,7 +225,7 @@
                                                     </p>
                                                     <p class="text-bold-tiny">Precio aplica en pagos mediante depósito o transferencia bancaria.</p>
                                                     <p class="conditons">
-                                                        *Sujeto a existencias. <br> *Precios sujetos a cambio sin previo aviso.
+                                                        *Sujeto a existencias. <br> *Precios sujetos a cambio sin previo aviso.<br>Imagenes ilustrativas, el modelo puede tener variaciones
                                                     </p>
                                                 </div>
                                             </div>
