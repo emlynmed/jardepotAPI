@@ -1,7 +1,7 @@
 {{--Vista escritorio--}}
 <style>
     .icon_ofertas {
-        background-image: url('/assets/images/icons/header_ofertas.png');
+        background-image: url('http://localhost/jardepotapi/public/assets/images/icons/header_ofertas.png');
         background-size: cover;
         width: 40px !important;
         height: 40px !important;
@@ -9,14 +9,14 @@
     }
 
     .icon_ofertas:hover {
-        background-image: url('/assets/images/icons/header_ofertas_alt.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_ofertas_alt.png');
         background-size: cover;
         width: 40px !important;
         height: 40px !important;
     }
 
     .icon_whatsapp {
-        background-image: url('/assets/images/icons/header_whatsapp.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_whatsapp.png');
         background-size: cover;
         width: 50px !important;
         height: 50px !important;
@@ -24,14 +24,14 @@
     }
 
     .icon_whatsapp:hover {
-        background-image: url('/assets/images/icons/header_whatsapp_alt.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_whatsapp_alt.png');
         background-size: cover;
         width: 50px !important;
         height: 50px !important;
     }
 
     .icon_refacciones {
-        background-image: url('/assets/images/icons/header_refacciones.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_refacciones.png');
         background-size: cover;
         width: 40px !important;
         height: 40px !important;
@@ -39,22 +39,22 @@
     }
 
     .icon_refacciones:hover {
-        background-image: url('/assets/images/icons/header_refacciones_alt.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_refacciones_alt.png');
         background-size: cover;
         width: 40px !important;
         height: 40px !important;
     }
 
     .icon_carrito {
-        background-image: url('/assets/images/icons/header_carrito.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_carrito.png');
         background-size: cover;
-        width: 40px !important;
-        height: 46px !important;
+        width: 25px !important;
+        height: 25px !important;
         transition: all 0.3s ease-in-out;
     }
 
     .icon_carrito:hover {
-        background-image: url('/assets/images/icons/header_carrito_alt.png');
+        background-image: url('http://localhost/jardepotapi/public//assets/images/icons/header_carrito_alt.png');
         background-size: cover;
         width: 40px !important;
         height: 46px !important;
@@ -97,7 +97,7 @@
         <div class="container align-items-center">
             <div class="div-navbar row" style="height: 100px;">
                 <div class="col-sm" style="padding: 0; line-height:30px;">
-                    <div class="text-barra text-center" style="font-size: 22px;">
+                    <div class="text-barra text-center" style="font-size: 22px;line-height: 23px;!important;">
                         Querétaro<br>
                         <a href="tel:4423960365" style="font-size: 16px !important;">
                             442 396 0365
@@ -239,8 +239,10 @@
                                     <div class="input-group-append">
                                         <span class="input-group-addon">
                                             <button class="btn btnSearch" type="submit" id=""
-                                                    style="height: 40px !important"><i style="color: gray"
-                                                                                       class="material-icons d-flex">search</i></button></span>
+                                                    style="height: 40px !important">
+                                                <i style="color: gray" class="material-icons d-flex">search</i>
+                                            </button>
+                                        </span>
                                     </div>
                                 </div>
                             </form>
