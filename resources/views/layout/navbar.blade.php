@@ -299,11 +299,11 @@
                         @endphp
                         <button class="btn ml-2 ml-xxs-1" role="button" style="color: #FFF;padding: 0 0 0 0 !important; margin-top:5px;" type="button" onclick="location.href='{{route('sales')}}'">
                             <div class="icon_ofertas mx-1" alt="¡Ver ofertas!" title="¡Ver ofertas!"></div>
-                            <div style="font-size: 11px;" class="mt-1">¡Ofertas!</a></div>
+                            <div style="font-size: 11px;" class="mt-1">¡Ofertas!</div>
                         </button>
                         <button class="btn ml-2 ml-xxs-1" role="button"
                             style="color: #FFF;padding: 0 0 0 0 !important; margin-top:5px;" type="button"
-                            onclick="window.open('https://wa.me/525551857805?text=Hola,%20me%20gustaría%20saber%20sobre%20{{ $producto }}')">
+                            onclick="return gtag_report_conversion('https://wa.me/525551857805?text=Hola,%20me%20gustaría%20saber%20sobre%20{{ $producto }}')">
                             <div class="icon_whatsapp mx-1" alt="Asesoría" title="Asesoría"></div>
                             <div style="font-size: 11px;" class="mt-1">Asesoría</div>
                         </button>
