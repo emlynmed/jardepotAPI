@@ -108,7 +108,7 @@
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Quintana Roo</p>
-                    <a href="tel:4433560484" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">928 294 0670</span></a><br>
+                    <a href="tel:9282940670" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">928 294 0670</span></a><br>
                 </div>
             </div>
             <div class="col-md-2">
@@ -138,7 +138,7 @@
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Tabasco</p>
-                    <a href="tel:2293300992" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">993 307 0286</span></a><br>
+                    <a href="tel:9933070286" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">993 307 0286</span></a><br>
                 </div>
             </div>
 

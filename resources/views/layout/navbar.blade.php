@@ -18,16 +18,16 @@
     .icon_whatsapp {
         background-image: url('/assets/images/icons/header_whatsapp.png');
         background-size: cover;
-        width: 40px !important;
-        height: 40px !important;
+        width: 50px !important;
+        height: 50px !important;
         transition: all 0.3s ease-in-out;
     }
 
     .icon_whatsapp:hover {
         background-image: url('/assets/images/icons/header_whatsapp_alt.png');
         background-size: cover;
-        width: 40px !important;
-        height: 40px !important;
+        width: 50px !important;
+        height: 50px !important;
     }
 
     .icon_refacciones {
