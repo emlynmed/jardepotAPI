@@ -35,8 +35,9 @@
                             <img src="{{asset('assets/images/otros/maps2.jpg')}}" alt="Google Maps MTY" title="google maps mty" style="width: 95%; height: 150px;">
                         </div>
                         <div class="col-md-3" style="line-height: 1.5;">
-                            <a class="link-footer" rel="noopener">
-{{--                            <a class="link-footer" href="https://goo.gl/maps/6eq7dv4uKsVuMfA36" target="_blank" rel="noopener">--}}
+{{--                            <a class="link-footer" rel="noopener">--}}
+                            <a class="link-footer" href="https://www.google.com/maps/place/Jardepot+GDL/@20.586082,-103.4289083,15z/data=!4m5!3m4!1s0x0:0xad385ebfe3a39a20!8m2!3d20.586082!4d-103.4289083"
+                               target="_blank" rel="noopener">
                                 <p class="d-flex align-items-center my-2">
                                     <span style="font-size: 20px;text-decoration: none !important;"><i class="material-icons fn-color-jd mr-2">location_on</i>PickUp Guadalajara</span>
                                 </p>
