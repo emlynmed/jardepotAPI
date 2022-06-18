@@ -124,7 +124,7 @@
                     <div class="text-barra text-center" style="font-size: 22px;">
                         Morelos
                         <br>
-                        <a href="tel:7773179652" onclick="return gtag_report_conversion('undefined');"style="font-size: 16px !important;">
+                        <a href="tel:7773179652" onclick="return gtag_report_conversion('undefined');" style="font-size: 16px !important;">
                             777 317 9652
                         </a>
                         <br>
@@ -146,7 +146,7 @@
                     <div class="text-barra text-center" style="font-size: 22px;">
                         Jalisco
                         <br>
-                        <a href="tel:3310775286" style="font-size: 16px !important;">
+                        <a href="tel:3310775286" onclick="return gtag_report_conversion('undefined');"  style="font-size: 16px !important;">
                             331 077 5286
                         </a>
                         <br>
