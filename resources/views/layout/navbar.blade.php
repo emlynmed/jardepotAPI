@@ -56,8 +56,8 @@
     .icon_carrito:hover {
         background-image: url('/assets/images/icons/header_carrito_alt.png');
         background-size: cover;
-        width: 40px !important;
-        height: 46px !important;
+        width: 25px !important;
+        height: 25px !important;
     }
 
     @media (min-width: 1500px) {
