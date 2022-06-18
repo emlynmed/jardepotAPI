@@ -96,7 +96,6 @@
     <nav class="navbar-dark bg-dark  d-none d-md-none d-lg-block">
         <div class="container align-items-center">
             <div class="div-navbar row" style="height: 100px;">
-
                 <div class="col-sm" style="padding: 0; line-height:30px;">
                     <div class="text-barra text-center" style="font-size: 22px;">
                         Querétaro<br>
@@ -107,16 +106,19 @@
                         <a href="tel:4421239272" style="font-size: 16px !important;">
                             442 123 9272
                         </a>
-
+                        <br>
+                        <a href="tel:4423801818" onclick="return gtag_report_conversion('undefined');" style="font-size: 16px !important;">
+                            442 380 1818
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-sm" style="padding: 0; line-height:30px;">
                     <div class="text-barra text-center" style="font-size: 22px;">
-                        Puebla
+                        Veracruz
                         <br>
-                        <a href="tel:2227051726" style="font-size: 16px !important;">
-                            222 705 1726
+                        <a href="tel:2293300992" style="font-size: 16px !important;">
+                            229 330 0992
                         </a>
                     </div>
                 </div>
@@ -193,7 +195,7 @@
         </div>
 
 
-        <div class="col-sm " style="padding: 50px; line-height: 45px; height: 30px   ">
+        <div class="col-sm " style="line-height: 45px; height: 30px   ">
             <div style="font-size: 28px;" class="col-sm text-barra text-center">
                 ¡Llámanos!
                 <a style="font-size: 30px !important" href="tel:8002129225">

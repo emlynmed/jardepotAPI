@@ -65,7 +65,7 @@
             <div class="col-md-3">
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px;">Del Interior</p>
-                    <a href="tel:2227051726" style="color: #fff;"><span class="my-4" style="font-size: 25px; font-weight: 500;">222 705 17 26</span></a>
+                    <a href="tel:2227051726" style="color: #fff;"><span class="my-4" style="font-size: 25px; font-weight: 500;">800 212 9225</span></a>
                 </div>
                 <div style="margin-bottom: 20px;">
                     <p style="margin-bottom: 0px; font-size: 20px">Mayoreo</p>
@@ -102,6 +102,14 @@
                     <a href="tel:7773645067" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">777 364 5067</span></a><br>
                     <a href="tel:7773645635" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">777 364 5635</span></a><br>
                 </div>
+                <div style="margin-bottom: 20px;">
+                    <p style="margin-bottom: 0px;">San Luis Potosí</p>
+                    <a href="tel:7226481040" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">444 328 0420</span></a><br>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p style="margin-bottom: 0px;">Quintana Roo</p>
+                    <a href="tel:4433560484" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">928 294 0670</span></a><br>
+                </div>
             </div>
             <div class="col-md-2">
                 <div style="margin-bottom: 20px;">
@@ -133,18 +141,7 @@
                     <a href="tel:2293300992" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">993 307 0286</span></a><br>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div style="margin-bottom: 20px;">
-                    <p style="margin-bottom: 0px;">San Luis Potosí</p>
-                    <a href="tel:2227051726" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">444 328 0420</span></a><br>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <p style="margin-bottom: 0px;">Quintana Roo</p>
-                    <a href="tel:2293300992" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">998 294 0670</span></a><br>
-                </div>
-            </div>
-            {{--<div class="w-20-tel">
-            </div>--}}
+
             <div class="col-md-12">
                 <br>
                 <h4 class="font-weight-bold my-2 mt-4" style="font-size: 18px;">Atención a Comercializadoras y Mayoristas:</h4>
