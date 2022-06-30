@@ -92,7 +92,8 @@
             </div>
             <div class="col-md-2">
                 <div style="margin-bottom: 20px;">
-                    <p style="margin-bottom: 0px;">Guadalajara</p>
+                    <p style="margin-bottom: 0px;">Jalisco</p>
+                    <a href="tel:3310775286" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">331 077 5286</span></a><br>
                     <a href="tel:3317283353" style="color: #fff;"><span class="my-4" style="font-size: 15px; font-weight: 300;">33 1728 3353</span></a><br>
                 </div>
                 <div style="margin-bottom: 20px;">
