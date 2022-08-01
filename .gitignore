@@ -18,3 +18,4 @@ yarn-error.log
 /public/sitemap.xml
 /public/sitemap_categorias.xml
 /public/sitemap_productos.xml
+/vendor
